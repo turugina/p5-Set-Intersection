@@ -9,17 +9,17 @@ Set::Intersection - provides an API to get intersection (of set theory) of ARRAY
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02_001
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.02_001';
 
 
 =head1 SYNOPSIS
 
   use Set::Intersection;
-  
+
   my @arr1 = qw/3 1 4 1 5 9/;
   my @arr2 = qw/1 7 3 2 0 5/;
   my @intersection = get_intersection(\@arr1, \@arr2);
@@ -38,43 +38,42 @@ our @EXPORT = qw/get_intersection/;
 
 =head1 FUNCTIONS
 
-=head2 get_intersection [\%options,] [\@ARRAY[, \@ARRAY[, ...]]]
+=head2 C<get_intersection()>
+
+    get_intersection([\%options,] [\@ARRAY[, \@ARRAY[, ...]]]);
 
 Returns intersection set (as LIST) of all ARRAYs.
 
-=over 1
+=over 4
 
-=item The result LIST is uniqized and unordered.
+=item *
 
-=item If no ARRAYs passed, the result LIST is empty.
+The result LIST is uniqued and unordered.
 
-=item If only one ARRAY passed, the result LIST is same as the passed. (elements won't be uniqized nor order-changed)
+=item *
 
-=item If you have undef in any LIST, you'll be warned.
+If no ARRAYs are passed, the result LIST is empty.
 
-=back
+=item *
 
-=over 1
+If only one ARRAY is passed, the result LIST is same as that passed. (In this
+case, elements won't be uniqued nor will the order bechanged.)
 
-=item %options
+=item *
 
-=over 2
-
-=item -preordered => BOOLEAN
-
-=over 3
-
-=item To reduce calculation time, get_intersection sorts ARRAYs
-      by their length before calculating intersections.
-
-=item This option tells that order of ARRAYs are well done,
-      and calculation of intersection will be based on left most ARRAY.
+If you have C<undef> in any LIST, you'll be warned.
 
 =back
 
-=back 
+=head3 C<%options>
 
-=back
+    -preordered => BOOLEAN
+
+To reduce calculation time, C<get_intersection()> sorts ARRAYs
+by their length before calculating intersections.
+
+This option tells that order of ARRAYs are well done,
+and calculation of intersection will be based on left most ARRAY.
 
 =cut
 
@@ -135,7 +134,6 @@ You can find documentation for this module with the perldoc command.
 
     perldoc Set::Intersection
 
-
 You can also look for information at:
 
 =over 4
@@ -156,11 +154,14 @@ L<http://cpanratings.perl.org/d/Set-Intersection>
 
 L<http://search.cpan.org/dist/Set-Intersection/>
 
+or
+
+L<https://metacpan.org/pod/Set::Intersection>
+
 =back
 
 
 =head1 ACKNOWLEDGEMENTS
-
 
 =head1 COPYRIGHT & LICENSE
 
@@ -173,3 +174,4 @@ under the same terms as Perl itself.
 =cut
 
 1; # End of Set::Intersection
+

@@ -41,6 +41,7 @@ You can also look for information at:
 
     Search CPAN
         http://search.cpan.org/dist/Set-Intersection/
+        https://metacpan.org/pod/Set::Intersection
 
 
 COPYRIGHT AND LICENCE
@@ -49,4 +50,5 @@ Copyright (C) 2009 turugina
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
+
 
