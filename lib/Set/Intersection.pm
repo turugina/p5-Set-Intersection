@@ -9,11 +9,11 @@ Set::Intersection - provides an API to get intersection (of set theory) of ARRAY
 
 =head1 VERSION
 
-Version 0.02_001
+Version 0.03;
 
 =cut
 
-our $VERSION = '0.02_001';
+our $VERSION = '0.03';
 
 
 =head1 SYNOPSIS
