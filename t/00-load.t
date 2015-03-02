@@ -9,3 +9,4 @@ BEGIN {
 ok $Set::Intersection::VERSION;
 
 diag( "Testing Set::Intersection $Set::Intersection::VERSION, Perl $], $^X" );
+

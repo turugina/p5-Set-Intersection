@@ -15,6 +15,6 @@ like($warn,
     qr/Use of uninitialized value in list assignment/s,
     "Got expected warning of 'undef' in arrays provided as arguments"
 );
-ok !$@;
+ok !$@, "No error";
 
 
